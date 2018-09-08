@@ -14,7 +14,7 @@ const mongoose = require('mongoose');
 app.use(cors());
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb://localhost:27017/');
+mongoose.connect('mongodb://<dragan47>:<dragan47>@ds149732.mlab.com:49732/objave');
 const connection = mongoose.connection;
 
 connection.once('open', () => {
