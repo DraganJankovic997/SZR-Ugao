@@ -1,0 +1,149 @@
+<div id="vrh">
+  <div class="dark-overlay">
+    <div class="header-slika">
+        <div class="container">
+            <div class="row" id="top-tekst">
+                <div class="col-md-7">
+                    <h1 class="display-3"><strong>Za dom po vasoj meri</strong></h1>
+
+                    <div class="d-flex flex-row">
+                        <div class="p-4 align-self-start">
+                            <i class="fa fa-check"></i>
+                        </div>
+                        <div class="p-4 align-self-end">
+                            <h1 class="display-5">Unikatan namestaj stvoren da ispuni sve vase zelje.</h1>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <div class="p-4 align-self-start">
+                            <i class="fa fa-check"></i>
+                        </div>
+                        <div class="p-4 align-self-end">
+                            <h1 class="display-5">Usluge dostave i montaze u najkracem vremenskom roku. </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container float-lg-right">
+        <div class="d-md-flex flex-row">
+            <div><h1 class="display-5">Pronadjite ideju u galeriji nasih radova!</h1></div>
+            <div class="align-self-end pl-3 pb-2"><a routerLink="/galerija" class="btn btn-lg btn-outline-success">Galerija</a></div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div id="o-nama">
+    <div class="naslov" id="o-nama-head">
+        <div class="container">
+            <div class="col text-center justify-self-center">
+                <h1 class="py-5 display-3"><strong>O nama</strong></h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="o-nama-body">
+        <div class="container">
+            <div class="pt-4 row">
+                <div class="col-md-6 align-self-center justify-self-center">
+                    <img src="/assets/images/pocetna_onama.jpg" alt="o-nama" class="img-fluid mb-3 rounded-circle">
+                </div>
+                <div class="col-md-6">
+                    <h3 class="display-5"><strong>Lorem ipsum dolor sit amet.</strong></h3>
+                    <div class="d-flex flex-row">
+                        <div class="p-4 align-self-start">
+                            <i class="fa fa-check"></i>
+                        </div>
+                        <div class="p-4 align-self-end">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, architecto, quaerat. Quis cum eius itaque ipsa magni quam, illo molestias
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <div class="p-4 align-self-start">
+                            <i class="fa fa-check"></i>
+                        </div>
+                        <div class="p-4 align-self-end">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, architecto, quaerat. Quis cum eius itaque ipsa magni quam, illo molestias
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <div class="p-4 align-self-start">
+                            <i class="fa fa-check"></i>
+                        </div>
+                        <div class="p-4 align-self-end">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, architecto, quaerat. Quis cum eius itaque ipsa magni quam, illo molestias
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="kontakt" class="mb-5">
+    <div class="naslov" id="kontakt-head">
+        <div class="container">
+            <div class="col text-center justify-self-center">
+                <h1 class="py-5 display-3"><strong>Kontakt</strong></h1>
+            </div>
+        </div>
+    </div>
+    <div class="container pt-4" id="kontakt-body">
+        <div class="row">
+            <div class="col-md-6 align-self-center mx-auto">
+                <strong>Broj telefona:</strong> 060/000-00-00 <br>
+                <strong>Adresa:</strong> Pere perica 32, Novi Sad (Klisa)<br>
+                <strong>Mail adresa:</strong> szrugao@gmail.com<br>
+                <br>
+                <img src="/assets/images/mm.jpg" alt="mala-mapa" id="mala-mapa" class="img-fluid img-thumbnail">
+                <button class="btn btn-dark" data-toggle="modal" data-target="#mapa" id="zoom-dugme"><i class="fa fa-search-plus"></i></button>
+                
+                <div class="modal" id="mapa">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Adresa radionice</h4>
+                                <button class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="/assets/images/mv.jpg" alt="velika-mapa" class="img-thumbnail img-fluid">
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-warning" data-dismiss="modal">Zatvori</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                        
+                    
+            </div>
+            <div class="col-md-6">
+                <h3 class="display-5">Kontaktirajte nas:</h3>
+                <form action="/" method="POST" >
+                    <div class="form-group">
+                        <label for="ime">Ime</label>
+                        <input type="text" class="form-control" [(ngModel)]="ime" name="ime" id="ime" placeholder="Unesite ime...">
+                    </div>
+                    <div class="form-group">
+                        <label for="mail">Mail adresa</label>
+                        <input type="text" class="form-control" name="mail" [(ngModel)]="mail" id="mail" placeholder="Unesite vasu e-mail adresu...">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefon">Broj telefona</label>
+                        <input type="text" class="form-control" name="broj" id="broj" [(ngModel)]="broj" placeholder="Unesite broj telefona...">
+                    </div>
+                    <div class="form-group">
+                        <label for="poruka">Poruka</label>
+                        <textarea class="form-control" id="poruka" name="poruka" [(ngModel)]="poruka" placeholder="Unesite poruku..." rows="5"></textarea>
+                    </div>
+                    <button type="submit" (click)="posaljiPoruku()" class="btn btn-primary float-right">Posalji</button>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+</div>
+

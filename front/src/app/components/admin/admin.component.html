@@ -1,0 +1,25 @@
+<div class="container mt-5 pt-5" *ngIf="isadm()"  >
+  <button class="btn btn-primary btn-lg" (click)="dodajNP()"  >+ Dodaj novi proizvod</button>
+
+
+  <div class="card text-dark bg-light mt-5" *ngFor="let p of poruke"  >
+    <div class="card-body">
+      <div class="container">
+            <p class="card-text mx-3 my-1"><strong>Ime: </strong>{{p.ime}}</p>
+            <p class="card-text mx-3 my-1"><strong>Broj: </strong>{{p.broj}}</p>
+            <p class="card-text mx-3 my-1"><strong>E-mail: </strong>{{p.mail}}</p>
+            <p class="card-text mx-3 my-1"><strong>Poruka:</strong>{{p.poruka}}</p>
+
+            <button (click)="obrisiPoruku(p.id)" class="float-right btn btn-danger">Obrisi</button>
+      </div>
+  </div>
+  </div>
+</div>
+
+<div class="container mt-5 pt-5" *ngIf="!isadm()">
+  <h1>Stranica ne postoji</h1>
+</div>
+
+
+
+

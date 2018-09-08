@@ -1,0 +1,22 @@
+body {
+    background: #FCF1D1;
+}
+
+#pewpew {
+    padding-top: 50px;
+}
+
+.navbar {
+    background-color: #4f6639;
+    border-bottom: 10px;
+    border-bottom-color: #ff0000;
+}
+
+#futer{
+    margin-top: 50px;
+}
+
+.card-header{
+    background-color: #5b7444;
+    color: white;
+}

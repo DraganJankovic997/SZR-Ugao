@@ -1,0 +1,23 @@
+.card{
+    margin-top: 50px;
+}
+
+.top-right{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#slajd .carousel-inner {
+    background-color: rgba(131, 131, 131);
+}
+
+.dd{
+    width: 100px;
+}
+
+.carousel-item img {
+    height: 450px !important;
+    width: 850px !important;
+    margin: auto;
+}
