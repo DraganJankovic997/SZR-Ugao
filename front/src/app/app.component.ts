@@ -14,8 +14,6 @@ export class AppComponent {
 
   ngOnInit(){
     this.pr = this.prijavljen();
-    console.log(this.pr);
-    console.log(localStorage.getItem('token') + localStorage.getItem('admin'));
   }
 
 
