@@ -2,6 +2,9 @@
     "name": "duletovsajt",
     "version": "1.0.0",
     "main": "back/server.js",
+    "engines": {
+        "node": "8.11.3",
+    },
     "scripts": {
       "ng": "ng",
       "start": "ng serve",
