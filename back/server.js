@@ -14,7 +14,7 @@ const mongoose = require('mongoose');
 app.use(cors());
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb://<dragan47>:<dragan47>@ds149732.mlab.com:49732/objave');
+mongoose.connect('mongodb://localhost:27017/');
 const connection = mongoose.connection;
 
 connection.once('open', () => {
@@ -22,7 +22,7 @@ connection.once('open', () => {
 });
 
 app.use('/', router);
-var port = process.env.PORT || 8080;
+var port = 4000;
 app.use(express.static(__dirname + '/uploads'));
 app.listen(port, ()=> console.log('express je ziv !'));
 
@@ -104,7 +104,9 @@ router.route('/galerija/dodaj').post(
     
 });
 
-router.route('/galerija/izmeni/:id').post(provera, upload.fields([{ name: 'slika'}, { name: 'sveslike'}]),(req, res) => {
+router.route('/galerija/izmeni/:id').post(provera,
+    upload.fields([{ name: 'slika'}, { name: 'sveslike'}]),
+    (req, res) => {
     Objava.findById(req.params.id, (err, objava) => {
         if(!objava) return next(new Error('Neuspelo ucitavanje objave'));
         else{

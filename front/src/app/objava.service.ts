@@ -16,50 +16,50 @@ export class ObjavaService {
 
 
   uzmiSveObjave(){
-    return this.http.get('/galerija');
+    return this.http.get(this.uri+'/galerija');
   }
 
   uzmiObjavu(id){
-    return this.http.get(`/galerija/detalji/${id}`);
+    return this.http.get(this.uri+`/galerija/detalji/${id}`);
   }
 
   dodajObjavu(f){
     var h:HttpHeaders;
     h = this.kh();
     alert("objava dodata");
-    return this.http.post('/galerija/dodaj', f, {headers:h});
+    return this.http.post(this.uri+'/galerija/dodaj', f, {headers:h});
   }
 
   izmeniObjavu(f, id){
     var h:HttpHeaders;
     h = this.kh();
     alert("izmena:  " + id);
-    return this.http.post(`/galerija/izmeni/${id}`, f, {headers:h});
+    return this.http.post(this.uri+`/galerija/izmeni/${id}`, f, {headers:h});
   }
 
   obrisiObjavu(id){
     var h:HttpHeaders;
     h = this.kh();
     alert("brisanje:  " + id);
-    return this.http.get(`/galerija/obrisi/${id}`, {headers:h});
+    return this.http.get(this.uri+`/galerija/obrisi/${id}`, {headers:h});
   }
 
   posaljiPoruku(f){
-    return this.http.post('/posaljiporuku', f);
+    return this.http.post(this.uri+'/posaljiporuku', f);
   }
 
   uzmiPoruke(){
     var h:HttpHeaders;
     h = this.kh();
-    return this.http.get("/admin", {headers: h});
+    return this.http.get(this.uri+"/admin", {headers: h});
   }
   
   signup(nk){
-    return this.http.post("/signup", nk);
+    return this.http.post(this.uri+"/signup", nk);
   }
 
   login(k){
-    return this.http.post("/login", k).subscribe((res) =>{
+    return this.http.post(this.uri+"/login", k).subscribe((res) =>{
       var t = res['t'];
       localStorage.setItem("token", t);
       if(res['i']=="admin") localStorage.setItem("admin", "da");
