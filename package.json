@@ -1,6 +1,6 @@
 {
     "name": "duletovsajt",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "main": "back/server.js",
     "scripts": {
       "ng": "ng",
