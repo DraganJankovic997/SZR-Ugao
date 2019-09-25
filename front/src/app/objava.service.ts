@@ -76,7 +76,6 @@ export class ObjavaService {
   }
 
   kh(){
-    console.log(localStorage.getItem('token'));
     var h = new HttpHeaders({"Authorization": `Bearer ${localStorage.getItem("token")}` })
     return h;
   }

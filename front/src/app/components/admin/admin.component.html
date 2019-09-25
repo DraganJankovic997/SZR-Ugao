@@ -1,5 +1,6 @@
 <div class="container mt-5 pt-5" *ngIf="isadm()"  >
   <button class="btn btn-primary btn-lg" (click)="dodajNP()"  >+ Dodaj novi proizvod</button>
+  <button class="btn btn-danger btn-lg" (click)="odj()">Odjavi se</button>
 
 
   <div class="card text-dark bg-light mt-5" *ngFor="let p of poruke"  >

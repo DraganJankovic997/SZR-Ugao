@@ -5,20 +5,12 @@
       <span class="navbar-toggler-icon"></span>
     </button>
   
-    <div class="collapse navbar-collapse float-left" id="topnav">
-      <ul class="navbar-nav">
+    <div class="collapse navbar-collapse" id="topnav">
+      <ul class="navbar-nav ml-auto">
         <li class="nav-item"><a routerLink="/"  class="nav-link">
           <button class="btn btn-link text-light " >Pocetna</button></a></li>
         <li class="nav-item"><a routerLink="/galerija" class="nav-link">
           <button class="btn btn-link text-light">Galerija</button></a></li>
-            <li class="nav-item" *ngIf="!pr"  ><a routerLink="/signup" class="nav-link">
-              <button class="btn btn-link text-light">Registracija</button></a></li>
-            <li class="nav-item" *ngIf="!pr" ><a routerLink="/login"  class="nav-link">
-              <button class="btn btn-link text-light">Prijava</button></a></li>
-        <div *ngIf="pr">
-            <li class="nav-item"><a href="/" class="nav-link">
-              <button (click)="odj()" class="btn btn-link text-light">Odjavi se</button></a></li>
-        </div>
       </ul>
     </div>
   </div>

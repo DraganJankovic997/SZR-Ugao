@@ -18,6 +18,6 @@
 
 .carousel-item img {
     height: 450px !important;
-    width: 850px !important;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
 }

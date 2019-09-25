@@ -28,6 +28,10 @@ export class AdminComponent implements OnInit {
     this.adm = localStorage.getItem("admin");
   }
 
+  odj(){
+    localStorage.clear();
+  }
+
   isadm(){
     if(this.adm == "da") return true;
     else return false;

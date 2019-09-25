@@ -22,7 +22,7 @@ connection.once('open', () => {
 });
 
 app.use('/', router);
-var port = process.env.PORT;
+var port = 4000;
 app.use(express.static(__dirname + '/uploads'));
 app.listen(port, ()=> console.log('express je ziv !'));
 

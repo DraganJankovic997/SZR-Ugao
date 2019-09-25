@@ -13,7 +13,9 @@ import { Objava } from '../../objava.model';
 export class GalerijaComponent implements OnInit {
 
   objave;
-  prikaz;
+  prikaz: Objava[];
+  slike:boolean = false;
+  nizslika:String[];
   sveKategorije = [
     ["Kupatilo" , false],
     ["Kuhinja" , false],
@@ -29,6 +31,10 @@ export class GalerijaComponent implements OnInit {
   ngOnInit() {
     this.uzmiObjave();
   }
+  vrstaprikaza(){
+    this.slike = !this.slike;
+  }
+
 
   filter(){
     this.prikaz = [];
@@ -36,7 +42,6 @@ export class GalerijaComponent implements OnInit {
     for(let k of this.sveKategorije){
       if(k[1]) pr.push(k[0]);
     }
-    console.log(pr);
     if(pr.length == 0) this.prikaz = this.objave;
     else {
       for(let o of this.objave){
@@ -44,8 +49,7 @@ export class GalerijaComponent implements OnInit {
           if(o.kategorija == p) this.prikaz.push(o);
         }
       }
-    }
-    console.log(this.prikaz);
+    }    
   }
 
   promeni(el){
@@ -53,10 +57,18 @@ export class GalerijaComponent implements OnInit {
       if(k[0] == el ) k[1] = !k[1];
     }
   }
+
+
   uzmiObjave(){
     this.objavaService.uzmiSveObjave().subscribe((data) => {
       this.objave = data;
       this.prikaz = this.objave;
+      for(let o of this.prikaz){
+        this.nizslika.push(o.glavnaslika);
+        for(let s of o.sveslike){
+          this.nizslika.push(s);
+        }
+      }
     }); 
   }
 

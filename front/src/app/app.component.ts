@@ -10,19 +10,8 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'SZR Ugao';
   router: Router;
-  pr: Boolean;
 
   ngOnInit(){
-    this.pr = this.prijavljen();
   }
 
-
-  odj(){
-    localStorage.clear();
-  }
-
-  prijavljen(){
-    if(localStorage.getItem('admin') =="da" || localStorage.getItem('admin') =="ne" ) return true;
-    else return false;
-  }
 }

@@ -12,36 +12,49 @@
                             </div>
 
                             <button class="btn btn-secondary float-right my-3" (click)="filter()">Potvrdi</button>
+                            <button class="btn btn-primary float-right my-3" (click)="vrstaprikaza()">Prikaz</button>
+
                         </form>  
                     </div>
                 </div>
             </div>
 
         <div class="col-md-8">
-            <div class="card text-dark bg-light mb-5" *ngFor="let o of prikaz">
-                <div class="card-header">
-                    <div class="container d-flex flex-row">
-                        <div class="align-self-start">
-                            <div class="d-block">{{o.naziv}}</div>
-                            <small>{{o.kategorija}}</small>
-                        </div>
+            <div *ngIf="!slike">
+                <div class="card text-dark bg-light mb-5" *ngFor="let o of prikaz">
+                    <div class="card-header">
+                        <div class="container d-flex flex-row">
+                            <div class="align-self-start">
+                                <div class="d-block">{{o.naziv}}</div>
+                                <small>{{o.kategorija}}</small>
+                            </div>
 
-                        <div class="align-self-end ml-auto">
-                            <button class="btn btn-warning" (click)="naDetalje(o._id)">Detalji</button> 
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="card-body">
-                    <div class="container row">
-                        <div class="col-sm-6 float-top float-sm-left">
-                            <img src="http://localhost:4000/{{o.glavnaslika}}" class="img-fluid my-3">
-                        </div>
-                        <div class="col-sm-6 float-sm-right">
-                                <p class="card-text mx-3 my-3">{{o.opis}}</p>
+                            <div class="align-self-end ml-auto">
+                                <button class="btn btn-warning" (click)="naDetalje(o._id)">Detalji</button> 
+                            </div>
+                            
                         </div>
                     </div>
+                    <div class="card-body">
+                        <div class="container row">
+                            <div class="col-sm-6 float-top float-sm-left">
+                                <img src="http://localhost:4000/{{o.glavnaslika}}" class="img-fluid my-3">
+                            </div>
+                            <div class="col-sm-6 float-sm-right">
+                                    <p class="card-text mx-3 my-3">{{o.opis}}</p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="container" *ngIf="slike" >
+                <div >
+                    <img src="http://localhost:4000/{{o}}" class="img-fluid" *ngFor="let o of nizslika" >
                 </div>
+
+            </div>
+
+
+
             </div>
         </div>
     </div>

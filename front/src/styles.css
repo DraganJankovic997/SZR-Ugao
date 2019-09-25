@@ -13,7 +13,9 @@ body {
 }
 
 #futer{
-    margin-top: 50px;
+    padding-top: 100px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
 }
 
 .card-header{
