@@ -14,3 +14,4 @@ I did this project alone, a long time ago, so code quality is not that great.
 * How to use a NoSql database
 * How to use CORS
 * How to use Multer to upload one or multiple photos
+* How to import and use bootstrap
