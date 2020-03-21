@@ -1,5 +1,5 @@
 # SZR-Ugao MEAN stack application (MongoDB, Express, Angular, Node).
-
+I did this project alone, a long time ago, so code quality is not that great.
 ### After an user logs in, he can:
 * Add new products
 * View, edit and delete old products
